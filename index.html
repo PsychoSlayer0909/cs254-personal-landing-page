@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -75,7 +75,7 @@
         </div>
     </div>
 </body>
-</html>
+</html> -->
 
 <!--
 INITIALIZE GIT
@@ -93,3 +93,40 @@ git add .
 git commit -m "Updated webpage"
 git push origin main
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center">
+    
+    <div class="w-full bg-blue-500 text-white text-center py-4 text-2xl font-bold">
+        Your Name
+    </div>
+    
+    <div class="container w-11/12 md:w-2/3 lg:w-1/2 mt-8">
+        <div class="bg-purple-700 p-6 rounded-lg shadow-lg text-center border-4 border-pink-400 transform rotate-2">
+            <h2 class="text-3xl font-bold">Welcome</h2>
+            <p class="mt-2">Welcome to my personal webpage! Here you can learn more about me and download my resume.</p>
+            <a href="resume.pdf" class="inline-block mt-4 px-6 py-3 bg-pink-500 text-white font-bold rounded-lg shadow-md hover:bg-pink-700 transition" download>Download My Resume</a>
+        </div>
+        
+        <div class="bg-teal-700 p-6 rounded-lg shadow-lg text-center border-4 border-yellow-400 mt-6 transform -rotate-2">
+            <h2 class="text-3xl font-bold">Contact Information</h2>
+            <p class="mt-2">Email: <a href="mailto:youremail@example.com" class="text-yellow-300 hover:underline">youremail@example.com</a></p>
+            <p class="mt-2">Phone: (123) 456-7890</p>
+            <p class="mt-2">Address: 123 Main St, Your City, Your State, ZIP</p>
+        </div>
+    </div>
+
+</body>
+</html>
