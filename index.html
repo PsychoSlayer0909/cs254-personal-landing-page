@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<!-- OG -->
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -80,7 +82,7 @@
         </div>
     </div>
 </body>
-</html>
+</html> -->
 
 <!--
 INITIALIZE GIT
@@ -99,39 +101,121 @@ git commit -m "Updated webpage"
 git push origin main
 -->
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Shawn Nosikovsky - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap');
         body {
-            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background: #1a1a1a;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+        }
+        nav a {
+            color: #0ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #ff0;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .content-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
+        }
+        h2 {
+            border-bottom: 3px solid #0ff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a1a1a;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white flex flex-col items-center">
+<body>
+    <header>
+        <h1>Shawn Nosikovsky</h1>
+    </header>
     
-    <div class="w-full bg-blue-500 text-white text-center py-4 text-2xl font-bold">
-        Your Name
-    </div>
-    
-    <div class="container w-11/12 md:w-2/3 lg:w-1/2 mt-8">
-        <div class="bg-purple-700 p-6 rounded-lg shadow-lg text-center border-4 border-pink-400 transform rotate-2">
-            <h2 class="text-3xl font-bold">Welcome</h2>
-            <p class="mt-2">Welcome to my personal webpage! Here you can learn more about me and download my resume.</p>
-            <a href="resume.pdf" class="inline-block mt-4 px-6 py-3 bg-pink-500 text-white font-bold rounded-lg shadow-md hover:bg-pink-700 transition" download>Download My Resume</a>
-        </div>
-        
-        <div class="bg-teal-700 p-6 rounded-lg shadow-lg text-center border-4 border-yellow-400 mt-6 transform -rotate-2">
-            <h2 class="text-3xl font-bold">Contact Information</h2>
-            <p class="mt-2">Email: <a href="mailto:youremail@example.com" class="text-yellow-300 hover:underline">youremail@example.com</a></p>
-            <p class="mt-2">Phone: (123) 456-7890</p>
-            <p class="mt-2">Address: 123 Main St, Your City, Your State, ZIP</p>
-        </div>
-    </div>
+    <section id="about" class="content-box">
+        <h2>About Me</h2>
+        <p>Welcome to my personal webpage! Here you can learn more about me and download my resume.</p>
+        <a href="shawnnosikovskyresume.pdf" style="color:#0ff;" class="resume-link" download>Download My Resume</a>
+    </section>
 
+    <section id="skills" class="content-box">
+        <h2>Skills and Expertise</h2>
+        <p>Hello! I am currently a Computer Science Major at LIU Brooklyn, well-versed in C++, Python, Git, Java, SQL, HTML, and CSS with 
+            strong fundamentals in quality assurance engineering and enterprise asset managemment; great hands-on technical skills, and 
+            experienced in many aspects of DevOps systems software. Highly experienced in several Microsoft Office suites such as Excel 
+            and PowerPoint. Proficient in basic information database management and oversight. Excellent oral and written communication 
+            and social relations skills. Professional fluency in Russian.</p>
+    </section>
+    
+    <section id="experience" class="content-box">
+        <h2>Professional Experience</h2>
+        <h3>Metropolitan Transit Authority - Quality Assurance Co-Lead</h3>
+        <p>Developed and tested tickets in Jira, automated data processes, and mentored interns.</p>
+        <h3>Young Minds in Motion - Presentation Developer</h3>
+        <p>Developed HTML/CSS-based school website and managed student demographic data.</p>
+    </section>
+    
+    <section id="projects" class="content-box">
+        <h2>Projects</h2>
+        <h3>MTA Signals Sustainment Initiative</h3>
+        <p>Developed an automation system in C++ that improved data processing efficiency fourfold.</p>
+        <h3>Multi-Modal Fitness AI</h3>
+        <p>Co-developed a body tracking fitness AI using pre-trained MoveNet Lightning and Thunder models.</p>
+        <h3>Retail Store Inventory Management Software</h3>
+        <p>Developed a universal inventory management system for retail stores that collects item quantity, price, and purchase orders.</p>
+    </section>
+    
+    <section id="contact" class="content-box">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:nshawn0909@gmail.com" style="color:#0ff;">nshawn0909@gmail.com</a></p>
+        <p>Phone: (718) 737-8797</p>
+        <p>Address: 123 Main St, City, State, ZIP</p>
+        <p><a href="https://www.linkedin.com/in/shawn-nosikovsky" style="color:#0ff;">My LinkedIn Page</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Shawn Nosikovsky. All rights reserved.</p>
+    </footer>
 </body>
-</html> -->
+</html>
