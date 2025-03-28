@@ -109,25 +109,29 @@ git push origin main
     <title>Shawn Nosikovsky - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
         body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: 'Rajdhani', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Fira Code', monospace;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
         header {
             text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #161b22, #1c2833, #283747);
+            font-family: 'Orbitron', sans-serif;
         }
         nav {
             display: flex;
             justify-content: center;
             gap: 20px;
             padding: 15px;
-            background: #1a1a1a;
+            background: #161b22;
         }
         nav ul {
             list-style: none;
@@ -136,35 +140,45 @@ git push origin main
             padding: 0;
         }
         nav a {
-            color: #0ff;
+            color: #66b3ff;
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
         }
         nav a:hover {
-            color: #ff0;
+            color: #a8d0ff;
         }
         section {
-            padding: 50px 20px;
+            padding: 80px 20px;
             text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
         }
         .content-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px auto;
             width: 80%;
-            box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.3);
+            box-shadow: 0px 0px 15px rgba(102, 179, 255, 0.2);
         }
         h2 {
-            border-bottom: 3px solid #0ff;
+            border-bottom: 2px solid #66b3ff;
             display: inline-block;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
         }
         footer {
             text-align: center;
-            padding: 20px;
-            background: #1a1a1a;
+            padding: 30px;
+            background: #161b22;
+        }
+        .resume-link{
+            color: #66b3ff;
         }
     </style>
 </head>
@@ -173,10 +187,20 @@ git push origin main
         <h1>Shawn Nosikovsky</h1>
     </header>
     
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <section id="about" class="content-box">
         <h2>About Me</h2>
         <p>Welcome to my personal webpage! Here you can learn more about me and download my resume.</p>
-        <a href="shawnnosikovskyresume.pdf" style="color:#0ff;" class="resume-link" download>Download My Resume</a>
+        <a href="shawnnosikovskyresume.pdf" class="resume-link" download>Download My Resume</a>
     </section>
 
     <section id="skills" class="content-box">
@@ -208,14 +232,30 @@ git push origin main
     
     <section id="contact" class="content-box">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:nshawn0909@gmail.com" style="color:#0ff;">nshawn0909@gmail.com</a></p>
+        <p>Email: <a href="mailto:nshawn0909@gmail.com" class="resume-link">nshawn0909@gmail.com</a></p>
         <p>Phone: (718) 737-8797</p>
         <p>Address: 123 Main St, City, State, ZIP</p>
-        <p><a href="https://www.linkedin.com/in/shawn-nosikovsky" style="color:#0ff;">My LinkedIn Page</a></p>
+        <p><a href="https://www.linkedin.com/in/shawn-nosikovsky" class="resume-link">My LinkedIn Page</a></p>
     </section>
     
     <footer>
         <p>&copy; 2025 Shawn Nosikovsky. All rights reserved.</p>
     </footer>
+
+    <script>
+        function revealSections() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight * 0.75) {
+                    section.classList.add('show');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealSections);
+        revealSections();
+    </script>
 </body>
 </html>
+
