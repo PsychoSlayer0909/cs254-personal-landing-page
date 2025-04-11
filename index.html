@@ -275,7 +275,7 @@ git push origin main
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
 
-            const res = await fetch('/api/contact', {
+            const res = await fetch('https://api-test-worker.shawn-nosikovsky.workers.dev/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
